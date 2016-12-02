@@ -1,3 +1,4 @@
+var webpack = require('webpack');
 var path = require('path')
 var config = require('../config')
 var utils = require('./utils')
@@ -81,8 +82,16 @@ module.exports = {
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
       }
-    ]
+    ],
+    // postLoaders: [
+    //   { test: /\.js$/, loader: 'es3ify' }
+    // ]
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      'Promise': 'es6-promise', // Thanks Aaron (https://gist.github.com/Couto/b29676dd1ab8714a818f#gistcomment-1584602)
+    })
+  ],
   eslint: {
     formatter: require('eslint-friendly-formatter')
   },
