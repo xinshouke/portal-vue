@@ -37,7 +37,7 @@ and cross your fingers. for any problem check [this page](https://github.com/cre
 
 Then in order to upload the node version run:
 
-`$# nvm install 6.9.1`
+`$# nvm install v6.9.1`
 
 ### Debian derivates
 Seems that the **node** binary is called **node.js** on Debian distros. This is due to namespace conflicts with other sw.
